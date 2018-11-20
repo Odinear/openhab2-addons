@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="mobilealerts"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="temphygrosensor">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="cloudbridge" />
+			<bridge-type-ref id="localbridge" />
+		</supported-bridge-type-refs>
+		<label>MobileAlerts thermo hygro sensor</label>
+		<description>Temperature and humidity sensor  with range –39.9°C…+59.9°C, 20%…99%, ±4%. Transmission rate: 7 min.</description>
+
+		<channels>
+			<channel id="temperature" typeId="temperature" />
+			<channel id="humidity" typeId="humidity" />
+			<channel id="battery" typeId="system.low-battery" />
+		</channels>
+
+		<config-description>
+			<parameter name="deviceId" type="text" required="true">
+				<label>DeviceId</label>
+				<description>The id of the device as written on the QR Code sticker.</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+</thing:thing-descriptions>

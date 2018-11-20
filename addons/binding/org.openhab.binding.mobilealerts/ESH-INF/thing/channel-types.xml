@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="mobilealerts"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+
+	<channel-type id="rain">
+		<item-type>Number</item-type>
+		<label>Rain</label>
+		<category>Rain</category>
+		<state readOnly="true" min="0" max="300" step="0.258" pattern="%.3f mm/h" />
+	</channel-type>
+
+	<channel-type id="temperaturepro">
+		<item-type>Number:Temperature</item-type>
+		<label>Temperature external</label>
+		<category>Temperature</category>
+		<state readOnly="true" min="-50" max="110" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="temperature">
+		<item-type>Number:Temperature</item-type>
+		<label>Temperature</label>
+		<category>Temperature</category>
+		<state readOnly="true" min="-39.9" max="59.9" step="0.1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="humidity">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Humidity</label>
+		<category>Humidity</category>
+		<state readOnly="true" min="20" max="99" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="humidityavg3h">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Humidity average 3h</label>
+		<category>Humidity</category>
+		<state readOnly="true" min="20" max="99" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="humidityavg24h">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Humidity average 24h</label>
+		<category>Humidity</category>
+		<state readOnly="true" min="20" max="99" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="humidityavg7d">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Humidity average 7 days</label>
+		<category>Humidity</category>
+		<state readOnly="true" min="20" max="99" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="humidityavg30d">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Humidity average 30 days</label>
+		<category>Humidity</category>
+		<state readOnly="true" min="20" max="99" step="1" pattern="%.1f %unit%" />
+	</channel-type>
+
+	<channel-type id="contact">
+		<item-type>Switch</item-type>
+		<label>Contact</label>
+		<state readOnly="true" />
+	</channel-type>
+
+	<channel-type id="wind">
+		<item-type>Number</item-type>
+		<label>Wind</label>
+		<category>Wind</category>
+		<state readOnly="true" min="0" max="50" step="0.1" pattern="%.1f m/s" />
+	</channel-type>
+
+	<channel-type id="gust">
+		<item-type>Number</item-type>
+		<label>Gust</label>
+		<category>Wind</category>
+		<state readOnly="true" min="0" max="50" step="0.1" pattern="%.1f m/s" />
+	</channel-type>
+
+
+</thing:thing-descriptions>
