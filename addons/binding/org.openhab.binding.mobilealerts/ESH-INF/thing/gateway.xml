@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="mobilealerts"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<thing-type id="gateway">
+		<supported-bridge-type-refs>
+			<bridge-type-ref id="localbridge" />
+		</supported-bridge-type-refs>
+		<label>MobileAlerts gateway</label>
+		<description>Gateway between sensors and the cloud or local storage</description>
+
+		<config-description>
+			<parameter name="deviceId" type="text" required="true">
+				<label>DeviceId</label>
+				<description>The id of the device as written on the QR Code sticker.</description>
+			</parameter>
+			<parameter name="dhcpIp" type="text" required="true">
+    			<label>Current IP Address</label>
+    			<context>network-address</context>
+			    <description>Current IP Address</description>
+			</parameter>
+	         <parameter name="dhcpUsed" type="boolean" required="true">
+                <label>Use DHPC</label>
+                <description>Use DHCP or set fixed IP address</description>
+            </parameter>
+            <parameter name="fixedIp" type="text" required="true">
+                <label>Fixed IP Address</label>
+                <context>network-address</context>
+                <description>Fixed IP Address</description>
+            </parameter>
+            <parameter name="netmask" type="text" required="true">
+                <label>Netmask</label>
+                <context>network-address</context>
+                <description>Netmask for fixed or DHCP Address</description>
+            </parameter>
+            <parameter name="gateway" type="text" required="true">
+                <label>Gateway IP</label>
+                <context>network-address</context>
+                <description>Gateway for fixed or DHCP Address</description>
+            </parameter>
+            <parameter name="name" type="text" required="true" max="20">
+                <label>Name</label>
+                <description>Name of the device</description>
+            </parameter>
+            <parameter name="server" type="text" required="true" max="64">
+                <label>Server</label>
+                <description>Name of the device</description>
+            </parameter>
+            <parameter name="proxyUsed" type="boolean" required="true">
+                <label>Use Proxy</label>
+                <description>Use a proxy for connection</description>
+            </parameter>
+            <parameter name="proxy" type="text" required="true" max="64">
+                <label>Proxy Address</label>
+                <description>Address of the proxy</description>
+            </parameter>
+            <parameter name="proxyPort" type="integer" required="true">
+                <label>Proxy Port</label>
+                <description>Port of the Proxy</description>
+            </parameter>
+            <parameter name="fixedDns" type="text" required="true">
+                <label>Fixed IP Address</label>
+                <context>network-address</context>
+                <description>Fixed IP Address</description>
+            </parameter>
+
+		</config-description>
+	</thing-type>
+</thing:thing-descriptions>

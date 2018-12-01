@@ -99,16 +99,17 @@ public class MobileAlertsBindingConstants {
     public static final String PROPERTY_CONTACT = "Contact Sensor";
 
     // Gateway
-    public static final String PROPERTY_DHCP_IP = "DHCP_IP";
-    public static final String PROPERTY_USE_DHCP = "DHCP_USED";
-    public static final String PROPERTY_FIXED_IP = "FIXED_IP";
-    public static final String PROPERTY_DHCP_NETMASK = "DHCP_NETMASK";
-    public static final String PROPERTY_FIXED_GATEWAY = "FIXED_GATEWAY";
-    public static final String PROPERTY_SERVER = "SERVER";
-    public static final String PROPERTY_USE_PROXY = "USE_PROXY";
-    public static final String PROPERTY_PROXY = "PROXY";
-    public static final String PROPERTY_PROXY_PORT = "PROXY_PORT";
-    public static final String PROPERTY_FIXED_DNS = "FIXED_DNS";
+    public static final String CONFIG_DHCP_IP = "dhcpIp";
+    public static final String CONFIG_USE_DHCP = "dhcpUsed";
+    public static final String CONFIG_FIXED_IP = "fixedIp";
+    public static final String CONFIG_DHCP_NETMASK = "netmask";
+    public static final String CONFIG_FIXED_GATEWAY = "gateway";
+    public static final String CONFIG_NAME = "name";
+    public static final String CONFIG_SERVER = "server";
+    public static final String CONFIG_USE_PROXY = "proxyUsed";
+    public static final String CONFIG_PROXY = "proxy";
+    public static final String CONFIG_PROXY_PORT = "proxyPort";
+    public static final String CONFIG_FIXED_DNS = "fixedDns";
 
     public static final String PARSE_TIMESTAMP = "MM/dd/yyyy KK:mm:ss aa";
     public static final Integer OFFLINE_THRESHOLD = 6;

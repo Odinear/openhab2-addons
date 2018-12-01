@@ -9,6 +9,8 @@
 package org.openhab.binding.mobilealerts.internal.handler;
 
 import org.eclipse.smarthome.core.thing.Bridge;
+import org.eclipse.smarthome.core.thing.ThingStatus;
+import org.eclipse.smarthome.core.thing.ThingStatusDetail;
 import org.eclipse.smarthome.core.thing.binding.BaseBridgeHandler;
 import org.openhab.binding.mobilealerts.internal.discovery.MobileAlertsDiscoveryService;
 import org.openhab.binding.mobilealerts.internal.protocol.MobileAlertsConnection;
@@ -35,4 +37,12 @@ public abstract class MobileAlertsBridgeHandler extends BaseBridgeHandler {
         this.maDiscovery = maDiscovery;
     }
 
+    protected void bridgeOffline() {
+        updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.OFFLINE.COMMUNICATION_ERROR,
+                "Mobile Alerts : cannot connect to data source");
+    }
+
+    protected void bridgeOnline() {
+        updateStatus(ThingStatus.ONLINE);
+    }
 }

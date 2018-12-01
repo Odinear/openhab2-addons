@@ -21,8 +21,6 @@ import org.eclipse.smarthome.config.core.Configuration;
 import org.eclipse.smarthome.core.thing.Bridge;
 import org.eclipse.smarthome.core.thing.ChannelUID;
 import org.eclipse.smarthome.core.thing.Thing;
-import org.eclipse.smarthome.core.thing.ThingStatus;
-import org.eclipse.smarthome.core.thing.ThingStatusDetail;
 import org.eclipse.smarthome.core.thing.binding.ThingHandler;
 import org.eclipse.smarthome.core.types.Command;
 import org.openhab.binding.mobilealerts.internal.protocol.MobileAlertsCloudConnection;
@@ -102,15 +100,6 @@ public class MobileAlertsCloudBridgeHandler extends MobileAlertsBridgeHandler {
         for (Thing thing : things) {
             updateDeviceData(thing, data);
         }
-    }
-
-    private void bridgeOffline() {
-        updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.OFFLINE.COMMUNICATION_ERROR,
-                "Mobile Alerts : cannot connect to data source");
-    }
-
-    private void bridgeOnline() {
-        updateStatus(ThingStatus.ONLINE);
     }
 
     @Override
